@@ -1,0 +1,15 @@
+
+plugin.tx_fsfzollersimpleheader_zollersimpleheader {
+    view {
+        # cat=plugin.tx_fsfzollersimpleheader_zollersimpleheader/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:fsf_zoller_simpleheader/Resources/Private/Templates/
+        # cat=plugin.tx_fsfzollersimpleheader_zollersimpleheader/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:fsf_zoller_simpleheader/Resources/Private/Partials/
+        # cat=plugin.tx_fsfzollersimpleheader_zollersimpleheader/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:fsf_zoller_simpleheader/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_fsfzollersimpleheader_zollersimpleheader//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

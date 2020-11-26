@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:fsf_zoller_simpleheader/Resources/Private/Language/locallang_db" date="2020-11-26T14:23:37Z" product-name="fsf_zoller_simpleheader">
+		<header/>
+		<body>
+			<trans-unit id="tx_fsfzollersimpleheader_domain_model_simpleheader" resname="tx_fsfzollersimpleheader_domain_model_simpleheader">
+				<source>Simpleheader</source>
+			</trans-unit>
+			<trans-unit id="tx_fsf_zoller_simpleheader_zollersimpleheader.name" resname="tx_fsf_zoller_simpleheader_zollersimpleheader.name">
+				<source>Zoller Simpleheader</source>
+			</trans-unit>
+			<trans-unit id="tx_fsf_zoller_simpleheader_zollersimpleheader.description" resname="tx_fsf_zoller_simpleheader_zollersimpleheader.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

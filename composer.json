@@ -1,0 +1,28 @@
+{
+    "name": "freesixtyfive/fsf-zoller-simpleheader",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "David Geib",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "FREESIXTYFIVE\\FsfZollerSimpleheader\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FREESIXTYFIVE\\FsfZollerSimpleheader\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "freesixtyfive/fsf-zoller-simpleheader": "self.version",
+        "typo3-ter/fsf-zoller-simpleheader": "self.version"
+    }
+}
