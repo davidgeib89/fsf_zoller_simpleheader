@@ -1,36 +1,78 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
-
-This Template is responsible for creating a table of domain objects.
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        List.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
-<f:section name="content">
-    <h1>Listing for Simpleheader</h1>
-
-    <f:flashMessages />
-
-    <table  class="tx_fsfzollersimpleheader" >
-        <tr>
-            <th> </th>
-            <th> </th>
-        </tr>
-
-        <f:for each="{simpleheaders}" as="simpleheader">
-            <tr>
-                <td><f:link.action action="edit" arguments="{simpleheader : simpleheader}">Edit</f:link.action></td>
-                <td><f:link.action action="delete" arguments="{simpleheader : simpleheader}">Delete</f:link.action></td>
-            </tr>
+<div class="fsf-zoller-simpleheader">
+    <div class="slider-container-simpleheader">
+        <f:for
+            each="{settings.references}"
+            as="reference"
+            key="key"
+            iteration="iterator"
+        >
+            <div class="slide-simpleheader">
+                <f:if condition="{reference.item.settings.img1}  != ''">
+                    <f:then>
+                    <div
+                        class="header-image"
+                        style="
+                            background-image: url(/uploads/tx_fsfzollersimpleheader/{reference.item.settings.img1});
+                        "
+                    >
+                        <div class="header-text">
+                            <f:if condition="{reference.item.settings.headline ">
+                                <h1>{reference.item.settings.headline}</h1>
+                            </f:if>
+                            <f:if condition="{reference.item.settings.text}">
+                                <h3>{reference.item.settings.text}</h3>
+                            </f:if>
+                            <f:if condition="{reference.item.settings.buttontext1}">
+                                <f:link.typolink
+                                    parameter="{reference.item.settings.url1}"
+                                    target="_blank"
+                                >
+                                    <button class="btn btn-yellow">
+                                        {reference.item.settings.buttontext1}
+                                    </button>
+                                </f:link.typolink>
+                            </f:if>
+                        </div>
+                    </div>
+                    </f:then>
+                    <f:else>
+                        <div
+                        class="header-image"
+                    >
+                        <video autoplay muted loop class="background-video">
+                        <source src="/uploads/tx_fsfzollersimpleheader/{reference.item.settings.video}" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                        </video>
+                        <div class="header-text">
+                            <f:if condition="{reference.item.settings.headline ">
+                                <h1>{reference.item.settings.headline}</h1>
+                            </f:if>
+                            <f:if condition="{reference.item.settings.text}">
+                                <h3>{reference.item.settings.text}</h3>
+                            </f:if>
+                            <f:if condition="{reference.item.settings.buttontext1}">
+                                <f:link.typolink
+                                    parameter="{reference.item.settings.url1}"
+                                    target="_blank"
+                                >
+                                    <button class="btn btn-yellow">
+                                        {reference.item.settings.buttontext1}
+                                    </button>
+                                </f:link.typolink>
+                            </f:if>
+                        </div>
+                    </div>
+                    </f:else>
+                </f:if>
+            </div>
         </f:for>
-    </table>
-
-    <f:link.action action="new">New Simpleheader</f:link.action>
-</f:section>
-</html>
+    </div>
+    <div class="scrolldown-button next-viewport-downn">
+        <img
+            class="scrolldown-image"
+            src="/typo3conf/ext/bootstrap_package/Resources/Public/Icons/black/arrow-down.svg"
+            title=""
+            alt=""
+        />
+    </div>
+</div>
