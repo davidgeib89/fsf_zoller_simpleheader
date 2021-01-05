@@ -20,7 +20,7 @@
                                 <h1>{reference.item.settings.headline}</h1>
                             </f:if>
                             <f:if condition="{reference.item.settings.text}">
-                                <h3>{reference.item.settings.text}</h3>
+                                <h3><f:format.html>{reference.item.settings.text}</f:format.html></h3>
                             </f:if>
                             <f:if condition="{reference.item.settings.buttontext1}">
                                 <f:link.typolink
@@ -48,7 +48,7 @@
                                 <h1>{reference.item.settings.headline}</h1>
                             </f:if>
                             <f:if condition="{reference.item.settings.text}">
-                                <h3>{reference.item.settings.text}</h3>
+                                <f:format.html><h3>{reference.item.settings.text}</h3></f:format.html>
                             </f:if>
                             <f:if condition="{reference.item.settings.buttontext1}">
                                 <f:link.typolink

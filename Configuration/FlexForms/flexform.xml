@@ -30,12 +30,15 @@
                                 </TCEforms>
                             </settings.headline>
                             <settings.text>
-                            <TCEforms>
+                                <TCEforms>
                                     <label>Unterüberschrift</label>
                                     <config>
-                                        <type>input</type>
-                                        <eval>trim</eval>
-                                        <size>230</size>
+                                        <type>text</type>
+                                        <rows>5</rows>
+                                        <cols>30</cols>
+                                        <eval>trim,required</eval>
+                                        <enableRichtext>1</enableRichtext>
+                                        <richtextConfiguration>default</richtextConfiguration>
                                     </config>
                                 </TCEforms>
                             </settings.text>
