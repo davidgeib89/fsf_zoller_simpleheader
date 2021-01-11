@@ -2,6 +2,7 @@
 
 .fsf-zoller-simpleheader {
 	position:relative;
+	margin-bottom:150px;
 }
 
 .fsf-zoller-simpleheader .header-image {
@@ -67,6 +68,10 @@
 }
 
 @media (max-width:1200px) {
+	.fsf-zoller-simpleheader {
+		margin-bottom:30px;
+	}
+
 	.fsf-zoller-simpleheader .header-text{
 		text-align: center;
 		position: absolute;
