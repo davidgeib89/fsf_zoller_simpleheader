@@ -42,5 +42,6 @@ class SimpleheaderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     {
         $simpleheaders = $this->simpleheaderRepository->findAll();
         $this->view->assign('simpleheaders', $simpleheaders);
+        $this->view->assign('rand', md5(rand() + rand()));
     }
 }

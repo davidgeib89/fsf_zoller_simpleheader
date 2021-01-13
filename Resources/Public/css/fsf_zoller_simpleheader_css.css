@@ -63,13 +63,25 @@
 .fsf-zoller-simpleheader .background-video {
 	height: 100%;
 }
-.fsf-zoller-simpleheader .slider-container-simpleheader {
-	overflow-x:hidden;
+
+
+.fsf-zoller-simpleheader .slick-prev {
+    left: 0px;
+    width: 60px;
+    height: 60px;
+    z-index: 999;
+}
+
+.fsf-zoller-simpleheader .slick-next {
+    right: 0px;
+    width: 60px;
+    height: 60px;
+    z-index: 999;
 }
 
 @media (max-width:1200px) {
 	.fsf-zoller-simpleheader {
-		margin-bottom:30px;
+		margin-bottom:60px;
 	}
 
 	.fsf-zoller-simpleheader .header-text{
@@ -103,5 +115,21 @@
 
 	.fsf-zoller-simpleheader .scrolldown-button {
         display: none;
-    }
+	}
+	
+	.fsf-zoller-simpleheader .slick-prev {
+		left: 0px;
+		width: 30px;
+		height: 30px;
+		z-index: 999;
+	}
+	
+	.fsf-zoller-simpleheader .slick-next {
+		right: 0px;
+		width: 30px;
+		height: 30px;
+		z-index: 999;
+	}
 }
+
+

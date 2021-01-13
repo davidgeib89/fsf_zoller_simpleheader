@@ -1,0 +1,18 @@
+<h1>Zoller Simple Header</h1>
+<f:for
+    each="{pi_flexform_transformed.settings.references}"
+    as="reference"
+    key="key"
+    iteration="iterator"
+>   
+    <f:if condition="{iterator.index} == '0'">
+        <h2>{reference.item.settings.headline}</h2>
+        <f:format.html>{reference.item.settings.text}</f:format.html>
+        <f:if condition="{reference.item.settings.img1}">
+            <f:image
+                src="/uploads/tx_fsfzollersimpleheader/{reference.item.settings.img1}"
+                height="150"
+            />
+        </f:if>
+    </f:if>
+</f:for>

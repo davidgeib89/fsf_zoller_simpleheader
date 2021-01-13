@@ -1,6 +1,12 @@
 $(document).ready(function(){
-	$('.slider-container-simpleheader').slick({
-	});
+
+	$('.slider-container-simpleheader').each(function () {
+		id = $(this).attr('id')
+		$('#' + id).slick({
+			arrows: true,
+			dots: true,
+		});
+	})
 
 	$(document).on("click", ".next-viewport-downn", function (event) {
 		event.preventDefault();
