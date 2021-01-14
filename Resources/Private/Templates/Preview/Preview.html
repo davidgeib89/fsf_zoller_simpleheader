@@ -1,4 +1,4 @@
-<h1>Zoller Simple Header</h1>
+<h2 style="margin-top:0;">Zoller Simple Header</h2>
 <f:for
     each="{pi_flexform_transformed.settings.references}"
     as="reference"
@@ -6,7 +6,7 @@
     iteration="iterator"
 >   
     <f:if condition="{iterator.index} == '0'">
-        <h2>{reference.item.settings.headline}</h2>
+        <h3>{reference.item.settings.headline}</h3>
         <f:format.html>{reference.item.settings.text}</f:format.html>
         <f:if condition="{reference.item.settings.img1}">
             <f:image
