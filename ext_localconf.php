@@ -41,7 +41,7 @@ call_user_func(
 			$iconRegistry->registerIcon(
 				'fsf_zoller_simpleheader-plugin-zollersimpleheader',
 				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-				['source' => 'EXT:fsf_zoller_simpleheader/Resources/Public/Icons/user_plugin_zollersimpleheader.svg']
+				['source' => 'EXT:fsf_zoller_simpleheader/Resources/Public/Icons/zoller_z.svg']
 			);
 		
     }
