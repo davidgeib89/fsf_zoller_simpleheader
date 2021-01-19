@@ -2,7 +2,7 @@
 
 .fsf-zoller-simpleheader {
 	position:relative;
-	margin-bottom:150px;
+	margin-bottom:150px!important;
 }
 
 .fsf-zoller-simpleheader .header-image {
@@ -79,9 +79,22 @@
     z-index: 999;
 }
 
+.fsf-zoller-simpleheader .slick-dots li button:before {
+    opacity: 0.75;
+}
+
+.fsf-zoller-simpleheader .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #f0e600;
+}
+
+.fsf-zoller-simpleheader .slick-dots {   
+	bottom: 15px;
+}
+
 @media (max-width:1200px) {
 	.fsf-zoller-simpleheader {
-		margin-bottom:60px;
+		margin-bottom:60px!important;
 	}
 
 	.fsf-zoller-simpleheader .header-text{
