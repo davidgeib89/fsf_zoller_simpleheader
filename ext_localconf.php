@@ -24,7 +24,7 @@ call_user_func(
                     elements {
                         zollersimpleheader {
                             iconIdentifier = fsf_zoller_simpleheader-plugin-zollersimpleheader
-                            title = LLL:EXT:fsf_zoller_simpleheader/Resources/Private/Language/locallang_db.xlf:tx_fsf_zoller_simpleheader_zollersimpleheader.name
+                            title = Simpleheader
                             description = LLL:EXT:fsf_zoller_simpleheader/Resources/Private/Language/locallang_db.xlf:tx_fsf_zoller_simpleheader_zollersimpleheader.description
                             tt_content_defValues {
                                 CType = list
