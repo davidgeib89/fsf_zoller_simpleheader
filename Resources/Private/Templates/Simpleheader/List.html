@@ -7,64 +7,203 @@
             iteration="iterator"
         >
             <div class="slide-simpleheader">
-                <f:if condition="{reference.item.settings.img1}  != ''">
+                <f:if condition="{reference.item.settings.img3}  != ''">
                     <f:then>
-                    <div
-                        class="header-image"
-                        style="
-                            background-image: url(/uploads/tx_fsfzollersimpleheader/{reference.item.settings.img1});
-                        "
-                    >
-                        <div class="header-text">
-                            <f:if condition="{reference.item.settings.headline ">
-                                <h1>{reference.item.settings.headline}</h1>
-                            </f:if>
-                            <f:if condition="{reference.item.settings.text}">
-                                <h3><f:format.html>{reference.item.settings.text}</f:format.html></h3>
-                            </f:if>
-                            <f:if condition="{reference.item.settings.buttontext1}">
-                                <f:link.typolink
-                                    parameter="{reference.item.settings.url1}"
-                                    
+                        <f:if condition="{reference.item.settings.img1}  != ''">
+                            <f:then>
+                                <div
+                                    class="header-image header-image-desktop {f:if(condition:
+                                        '{reference.item.settings.img2}',
+                                        then:
+                                        'header-image-black')}"
+                                    style="
+                                        background-image: url(/uploads/tx_fsfzollersimpleheader/{reference.item.settings.img1});
+                                    "
                                 >
-                                    <button class="btn btn-yellow">
-                                        {reference.item.settings.buttontext1}
-                                    </button>
-                                </f:link.typolink>
-                            </f:if>
-                        </div>
-                    </div>
+                                    <div class="header-text {f:if(condition:
+                                        '{reference.item.settings.img2}',
+                                        then:
+                                        'text-black')}">
+                                        <f:if condition="{reference.item.settings.headline ">
+                                            <h1>{reference.item.settings.headline}</h1>
+                                        </f:if>
+                                        <f:if condition="{reference.item.settings.text}">
+                                            <h3><f:format.html>{reference.item.settings.text}</f:format.html></h3>
+                                        </f:if>
+                                        <f:if condition="{reference.item.settings.buttontext1}">
+                                            <f:link.typolink
+                                                parameter="{reference.item.settings.url1}"
+                                                
+                                            >
+                                                <button class="btn btn-yellow">
+                                                    {reference.item.settings.buttontext1}
+                                                </button>
+                                            </f:link.typolink>
+                                        </f:if>
+                                    </div>
+                                    <f:if condition="{reference.item.settings.img2}  != ''">
+                                        <div class="overlay-simple-header-image-wrapper">
+                                            <img
+                                                class="overlay-simple-header-image"
+                                                src="/uploads/tx_fsfzollersimpleheader/{reference.item.settings.img2}"
+                                                title=""
+                                                alt=""
+                                            />
+                                        </div>
+                                    </f:if>
+                                </div>
+                                 <div
+                                    class="header-image header-image-mobile {f:if(condition:
+                                        '{reference.item.settings.img2}',
+                                        then:
+                                        'header-image-black')}"
+                                    style="
+                                        background-image: url(/uploads/tx_fsfzollersimpleheader/{reference.item.settings.img3});
+                                    "
+                                >
+                                    <div class="header-text {f:if(condition:
+                                        '{reference.item.settings.img2}',
+                                        then:
+                                        'text-black')}">
+                                        <f:if condition="{reference.item.settings.headline ">
+                                            <h1>{reference.item.settings.headline}</h1>
+                                        </f:if>
+                                        <f:if condition="{reference.item.settings.text}">
+                                            <h3><f:format.html>{reference.item.settings.text}</f:format.html></h3>
+                                        </f:if>
+                                        <f:if condition="{reference.item.settings.buttontext1}">
+                                            <f:link.typolink
+                                                parameter="{reference.item.settings.url1}"
+                                                
+                                            >
+                                                <button class="btn btn-yellow">
+                                                    {reference.item.settings.buttontext1}
+                                                </button>
+                                            </f:link.typolink>
+                                        </f:if>
+                                    </div>
+                                    <f:if condition="{reference.item.settings.img2}  != ''">
+                                        <div class="overlay-simple-header-image-wrapper">
+                                            <img
+                                                class="overlay-simple-header-image"
+                                                src="/uploads/tx_fsfzollersimpleheader/{reference.item.settings.img2}"
+                                                title=""
+                                                alt=""
+                                            />
+                                        </div>
+                                    </f:if>
+                                </div>
+                            </f:then>
+                            <f:else>
+                                <div
+                                class="header-image"
+                                >
+                                    <video autoplay muted loop class="background-video">
+                                    <source src="/uploads/tx_fsfzollersimpleheader/{reference.item.settings.video}" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                    </video>
+                                    <div class="header-text">
+                                        <f:if condition="{reference.item.settings.headline ">
+                                            <h1>{reference.item.settings.headline}</h1>
+                                        </f:if>
+                                        <f:if condition="{reference.item.settings.text}">
+                                            <f:format.html><h3>{reference.item.settings.text}</h3></f:format.html>
+                                        </f:if>
+                                        <f:if condition="{reference.item.settings.buttontext1}">
+                                            <f:link.typolink
+                                                parameter="{reference.item.settings.url1}"
+                                                
+                                            >
+                                                <button class="btn btn-yellow">
+                                                    {reference.item.settings.buttontext1}
+                                                </button>
+                                            </f:link.typolink>
+                                        </f:if>
+                                    </div>
+                                </div>
+                            </f:else>
+                        </f:if>
                     </f:then>
                     <f:else>
-                        <div
-                        class="header-image"
-                    >
-                        <video autoplay muted loop class="background-video">
-                        <source src="/uploads/tx_fsfzollersimpleheader/{reference.item.settings.video}" type="video/mp4">
-                        Your browser does not support HTML5 video.
-                        </video>
-                        <div class="header-text">
-                            <f:if condition="{reference.item.settings.headline ">
-                                <h1>{reference.item.settings.headline}</h1>
-                            </f:if>
-                            <f:if condition="{reference.item.settings.text}">
-                                <f:format.html><h3>{reference.item.settings.text}</h3></f:format.html>
-                            </f:if>
-                            <f:if condition="{reference.item.settings.buttontext1}">
-                                <f:link.typolink
-                                    parameter="{reference.item.settings.url1}"
-                                    
+                        <f:if condition="{reference.item.settings.img1}  != ''">
+                            <f:then>
+                                <div
+                                    class="header-image {f:if(condition:
+                                        '{reference.item.settings.img2}',
+                                        then:
+                                        'header-image-black')}"
+                                    style="
+                                        background-image: url(/uploads/tx_fsfzollersimpleheader/{reference.item.settings.img1});
+                                    "
                                 >
-                                    <button class="btn btn-yellow">
-                                        {reference.item.settings.buttontext1}
-                                    </button>
-                                </f:link.typolink>
-                            </f:if>
-                        </div>
-                    </div>
+                                    <div class="header-text {f:if(condition:
+                                        '{reference.item.settings.img2}',
+                                        then:
+                                        'text-black')}">
+                                        <f:if condition="{reference.item.settings.headline ">
+                                            <h1>{reference.item.settings.headline}</h1>
+                                        </f:if>
+                                        <f:if condition="{reference.item.settings.text}">
+                                            <h3><f:format.html>{reference.item.settings.text}</f:format.html></h3>
+                                        </f:if>
+                                        <f:if condition="{reference.item.settings.buttontext1}">
+                                            <f:link.typolink
+                                                parameter="{reference.item.settings.url1}"
+                                                
+                                            >
+                                                <button class="btn btn-yellow">
+                                                    {reference.item.settings.buttontext1}
+                                                </button>
+                                            </f:link.typolink>
+                                        </f:if>
+                                    </div>
+                                    <f:if condition="{reference.item.settings.img2}  != ''">
+                                        <div class="overlay-simple-header-image-wrapper">
+                                            <img
+                                                class="overlay-simple-header-image"
+                                                src="/uploads/tx_fsfzollersimpleheader/{reference.item.settings.img2}"
+                                                title=""
+                                                alt=""
+                                            />
+                                        </div>
+                                    </f:if>
+                                </div>
+                            </f:then>
+                            <f:else>
+                                <div
+                                class="header-image"
+                                >
+                                    <video autoplay muted loop class="background-video">
+                                    <source src="/uploads/tx_fsfzollersimpleheader/{reference.item.settings.video}" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                    </video>
+                                    <div class="header-text">
+                                        <f:if condition="{reference.item.settings.headline ">
+                                            <h1>{reference.item.settings.headline}</h1>
+                                        </f:if>
+                                        <f:if condition="{reference.item.settings.text}">
+                                            <f:format.html><h3>{reference.item.settings.text}</h3></f:format.html>
+                                        </f:if>
+                                        <f:if condition="{reference.item.settings.buttontext1}">
+                                            <f:link.typolink
+                                                parameter="{reference.item.settings.url1}"
+                                                
+                                            >
+                                                <button class="btn btn-yellow">
+                                                    {reference.item.settings.buttontext1}
+                                                </button>
+                                            </f:link.typolink>
+                                        </f:if>
+                                    </div>
+                                </div>
+                            </f:else>
+                        </f:if>
                     </f:else>
                 </f:if>
+
             </div>
+
+
         </f:for>
     </div>
     <div class="scrolldown-button next-viewport-downn">

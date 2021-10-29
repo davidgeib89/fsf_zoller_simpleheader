@@ -80,6 +80,36 @@
                                     </config>
                                 </TCEforms>
                             </settings.img1>
+                            <settings.img3>
+                                <TCEforms>
+                                    <label>Hintergrund mobil</label>
+                                    <config>										
+                                        <type>group</type>
+                                        <internal_type>file</internal_type>
+                                        <allowed>gif, jpg,jpeg,png,csv</allowed>
+                                        <max_size>10000</max_size>
+                                        <uploadfolder>uploads/tx_fsfzollersimpleheader</uploadfolder>
+                                        <maxitems>1</maxitems>
+                                        <size>1</size>
+                                        <selectedliststyle>Width:180px</selectedliststyle>
+                                    </config>
+                                </TCEforms>
+                            </settings.img3>
+                            <settings.img2>
+                                <TCEforms>
+                                    <label>Vordergrund Bild</label>
+                                    <config>										
+                                        <type>group</type>
+                                        <internal_type>file</internal_type>
+                                        <allowed>gif, jpg,jpeg,png,csv</allowed>
+                                        <max_size>10000</max_size>
+                                        <uploadfolder>uploads/tx_fsfzollersimpleheader</uploadfolder>
+                                        <maxitems>1</maxitems>
+                                        <size>1</size>
+                                        <selectedliststyle>Width:180px</selectedliststyle>
+                                    </config>
+                                </TCEforms>
+                            </settings.img2>
                             <settings.video>
                                     <TCEforms>
                                         <label>Video/Animation</label>

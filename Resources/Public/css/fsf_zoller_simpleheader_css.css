@@ -29,6 +29,15 @@
     width: 100%;
 }
 
+.fsf-zoller-simpleheader .header-text.text-black {
+    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 110px;
+    max-width: 1524px;
+    display: block;
+    margin: 0 auto;
+}
+
 .fsf-zoller-simpleheader .header-text h1 {
     font-size: 90px;
     color: #ffffff;
@@ -40,6 +49,32 @@
     font-size: 42px;
     color: #ffffff;
     margin-bottom: 30px;
+}
+
+.fsf-zoller-simpleheader .header-text.text-black h3 {
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+}
+
+.fsf-zoller-simpleheader .header-text.text-black h1 {
+    font-size: 240px;
+    font-weight: 500;
+}
+
+.fsf-zoller-simpleheader .header-text.text-black h3 {
+    text-align: left;
+    font-size: 64px;
+    line-height: 74px;
+    font-weight: 500;
+}
+
+.fsf-zoller-simpleheader .header-text.text-black h1,
+.fsf-zoller-simpleheader .header-text.text-black h3 {
+    color: black;
 }
 
 .fsf-zoller-simpleheader .scrolldown-button {
@@ -91,7 +126,31 @@
     bottom: 15px;
 }
 
+.fsf-zoller-simpleheader .overlay-simple-header-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100%;
+}
+
+.fsf-zoller-simpleheader
+    .overlay-simple-header-image-wrapper
+    .overlay-simple-header-image {
+    z-index: 999;
+    max-width: 100%;
+}
+
+.header-image-mobile {
+    display: none;
+}
+
 @media (max-width: 1200px) {
+    .header-image-mobile {
+        display: inherit;
+    }
+    .header-image-desktop {
+        display: none;
+    }
     .fsf-zoller-simpleheader {
         margin-bottom: 60px !important;
     }
@@ -123,6 +182,10 @@
         max-height: 550px;
     }
 
+    .fsf-zoller-simpleheader .header-image.header-image-black {
+        max-height: 736px;
+    }
+
     .fsf-zoller-simpleheader .scrolldown-button {
         display: none;
     }
@@ -138,6 +201,46 @@
         right: 0px;
         width: 30px;
         height: 30px;
+        z-index: 999;
+    }
+    /*new*/
+    .fsf-zoller-simpleheader .header-text.text-black h1 {
+        font-size: 64px;
+        line-height: 74px;
+        font-weight: 500;
+    }
+
+    .fsf-zoller-simpleheader .header-text.text-black h3 {
+        text-align: left;
+        font-size: 32px;
+        line-height: 44px;
+        font-weight: 500;
+        max-width: 1000px;
+    }
+
+    .fsf-zoller-simpleheader .header-text.text-black {
+        height: 100%;
+        padding-top: 54px;
+        padding-bottom: 100px;
+        max-width: 1524px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .fsf-zoller-simpleheader .header-text.text-black h3 {
+        left: 17px;
+    }
+
+    .fsf-zoller-simpleheader .overlay-simple-header-image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-height: 100%;
+    }
+
+    .fsf-zoller-simpleheader
+        .overlay-simple-header-image-wrapper
+        .overlay-simple-header-image {
         z-index: 999;
     }
 }
